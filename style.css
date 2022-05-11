@@ -1,0 +1,850 @@
+/*
+Theme Name: Portfolio Custom
+Author: Natasa Bogdanovic
+Author URI: https://natasabogdanovic.rf.gd/
+Description: Intermediate Bootstrap WordPress theme
+Version: 1.0
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Inter:wght@300;400;600;700;900&display=swap');
+
+
+:root{
+    --zelena: #8abb25;
+    --pink : rgb(255, 46, 147);
+    --plava: #0b91cc;
+    --bela: #fff;
+    --crna: #000;
+    --text: #656565;
+    --bgColor:#FBFAFF;
+    --transition: .4s ease;
+    --fontPrimary: 'Inter', 'sans-serif';
+}
+
+/**********************
+Basic styles
+***********************/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--fontPrimary);
+    font-size: 16px;
+    color:var(--black);
+    overflow-x: hidden;
+}
+
+p{
+    color: var(--text);
+}
+
+.py{
+    padding: 100px 0;
+}
+
+.container{
+    margin:auto;
+    width: 75%;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+}
+
+h3::after{
+    content: "";
+    margin: 10px auto;
+    display: block;
+    height: 2px;
+    width: 50px;
+    background: var(--crna);
+}
+
+a{
+    color: var(--pink);
+}
+
+
+ul{
+    list-style: none;
+}
+
+/***************************
+nav
+***************************/
+
+
+.navbar .nav-item .nav-link,
+.navbar .socialIcons a{
+    color: var(--bela);
+    transition: var(--transition);
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-item .nav-link:hover{
+    color: var(--zelena);
+}
+
+.navbar-nav .nav-item .nav-link{
+    font-weight: 600;
+}
+
+.navbar .logo a{
+    font-family:'Handlee', cursive;
+    font-size: 50px;
+    color: var(--bela);
+    font-style: italic;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+.navbar .socialIcons i {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    transition: var(--transition);
+}
+
+.navbar .socialIcons i:hover {
+    color: var(--zelena);
+}
+
+
+/* sticky nav*/
+.sticky {
+    background: var(--bela);
+    padding: 5px 15px;
+    transition: .5s ease-in-out;
+}
+.sticky .nav-link{
+    color: var(--crna) !important;
+    text-shadow: none;
+}
+
+.sticky .logo a{
+    color: var(--crna) !important;
+}
+
+.sticky .socialIcons i{
+    color: var(--crna) !important;
+}
+
+.sticky .socialIcons i:hover,
+.sticky .nav-link:hover
+{
+    color: var(--zelena) !important;
+}
+
+/* Pomocna nav*/
+.pomocnaNav{
+    background: var(--crna) !important;
+}
+
+.pomocnaNav .socialIcons i:hover{
+    color: var(--zelena);
+}
+
+
+/***************************
+header
+***************************/
+.mainHeader .slika{
+    position: relative;
+}
+
+.mainHeader .slika::after{
+    content: '';
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,rgba(255, 46, 147,.7) 50%,transparent 50%);
+}
+
+.mainHeader img{
+ width: 100%;
+ height: 600px;
+ object-fit: cover;
+}
+
+.mainHeader .col-md-6{
+    position: absolute;
+    top: 25%;
+    color: var(--bela);
+    left: 3%;
+}
+
+.btnUnajmi{
+    align-self: flex-start;
+    color: var(--bela);
+    border: 1px solid var(--bela);
+    padding: 10px 45px;
+    font-size: 1.4rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btnUnajmi:hover{
+    background: var(--bela) !important;
+    color: var(--zelena);
+    text-decoration: none;
+}
+
+
+/***************************
+opis projekta
+***************************/
+
+.opisProjekta .col-md-6:first-child{
+    color: var(--crna);
+}
+
+
+.opisProjekta .btnKontakt{
+    background:var(--crna);
+    border: none;
+    border-radius: 0;
+    padding: 10px 25px;
+}
+
+.btnKontakt:hover{
+    background: var(--pink);
+}
+
+/****************************
+slider 
+*****************************/
+.slider{
+    background: var(--bgColor);
+    position: relative;
+}
+
+.custom-shape-divider-top-1646081920 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1646081920 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 72px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1646081920 .shape-fill {
+    fill: var(--bela)
+}
+
+.custom-shape-divider-bottom-1646082773 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1646082773 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 70px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1646082773 .shape-fill {
+    fill: var(--bela);
+}
+
+/****************************
+blog
+*****************************/
+
+.blog a{
+    color: var(--pink);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.blog .card-body{
+    padding: 0 !important;
+    height: 100%;
+}
+
+.blog .card-title a{
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--crna);
+    transition: var(--transition);
+    text-transform: capitalize;
+}
+
+.blog .card-title a:hover{
+    text-decoration: none;
+}
+
+
+.blog .col{
+    flex: 0 0 33%;
+}
+
+
+.blog .post-categories li{
+    list-style: none;
+    display: inline-block;
+}
+
+.blog .meta{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog .meta a:hover{
+    text-decoration: none;
+    color:var(--zelena);
+}
+
+.blog .col .meta .avatar{
+    flex: 0 0 20%;
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+}
+
+.blog .col .meta .autorDate{
+    flex: 0 0 76%;
+    position: relative;
+    left: -20px;
+}
+
+.blog .col .meta .category{
+    flex: 0 0 100%;
+}
+
+/****************************
+footer
+*****************************/
+footer{
+    background: var(--pink);
+    padding-top: 100px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+footer a{
+    color: var(--bela);
+    transition: var(--transition);
+}
+
+footer a:hover{
+    color: var(--crna);
+    text-decoration: none;
+}
+
+.kategorije li::after,
+.latestBlogs li::after,
+.latestBlogs h4::after,
+.kategorije h4::after
+{
+    display: block;
+    content: "";
+    margin: 10px auto;
+    height: 1px;
+    width: 200px;
+    background: #E5E5E5;
+}
+
+
+footer .socials i{
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+footer h4{
+    text-transform: uppercase;
+}
+/***********************
+BLOG STRANICA
+************************/
+.headeri .slika{
+    position: relative;
+}
+
+.headeri img{
+ width: 100%;
+ height: 600px;
+ object-fit: cover;
+}
+
+.headeri .box{
+    position: absolute;
+    top: 35%;
+    color: var(--bela);
+    left: 10%;
+}
+
+.headeri .card{
+    border-radius: 0;
+    background-color: var(--zelena);
+    opacity: .7;
+    height: 200px;
+    width: 450px;
+}
+
+/*gradijent*/
+.headeri .slika::after{
+    content: '';
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,transparent,rgba(0, 0, 0,.7));
+}
+
+/***********************
+KONTAKT STRANICA
+************************/
+
+.contact hr{
+   height: 2px;
+   width: 50px;
+}
+
+.contact .fa-phone,
+.contact .fa-envelope-open{
+    font-size: 15px;
+    border-radius: 50%;
+    padding: 10px;
+    color: var(--bela);
+}
+
+.contact .fa-phone{
+    background: var(--plava);
+}
+
+.contact .fa-envelope-open{
+    background: var(--pink);
+}
+
+.contact .dataContact li{
+    margin-top: 5px;
+    color: var(--text);
+}
+
+.headeri .cardContact{
+   background-color: var(--plava);
+}
+
+.wpforms-field-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wpforms-field-text{
+    flex: 0 0 45%;
+}
+
+.wpforms-field-text:nth-child(2){
+    margin-left: 10px !important;
+}
+
+.wpforms-field-textarea{
+    flex: 0 0 100%;
+}
+
+.wpforms-submit{
+    width: 100% !important;
+    display: block !important;
+    background: var(--crna) !important;
+    color: var(--bela) !important;
+    border: none !important;
+}
+
+.wpforms-field-container label{
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+}
+
+
+/***********************
+pojedinacni blog postovi
+************************/
+
+.blogList .widget a:hover{
+    text-decoration: none;
+    color: #000;
+}
+
+.col-md-8 .meta .avatar{
+    flex: 0 0 10%;
+    border-radius: 50%;
+}
+
+.col-md-8 .meta .autorDate{
+    flex: 0 0 15%;
+    margin-right: 20px;
+}
+
+.col-md-8 .category{
+    flex: 0 0 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-md-8 .category a{
+    margin-left: 20px;
+}
+
+.vertical{
+    border-left: 2px solid #E5E5E5;
+    height: 50px;      
+}
+
+.horizontal{
+    margin-top: -17px;
+}
+
+.col-md-8 span{
+    flex: 0 0 90%;
+}
+
+.col-md-4 input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.col-md-4 h4::after,
+.col-md-4 li::after{
+    margin: 10px 0;
+}
+
+.col-md-4 .latestBlogs,
+.col-md-4 .kategorije{
+    padding: 0;
+}
+
+.col-md-4 .latestBlogs h4,
+.col-md-4 .kategorije h4
+{
+    font-weight: 700;
+    margin-top: 25px;
+}
+
+/*postNavigation */
+.postNavigation{
+    padding: 50px 0;
+}
+
+.postNavigation a:hover{
+    text-decoration: none;
+    color: var(--crna);
+}
+
+.postNavigation .previous i,
+.postNavigation .next i{
+    color: var(--zelena);
+    font-size: 1.4rem;
+}
+
+
+/********************
+Comment section
+*********************/
+.comment-reply-title::after{
+    display: none !important;
+}
+ 
+.comment-form-comment{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comment-form-comment label{
+    flex: 0 0 100%;
+}
+
+.comment-form-comment textarea{
+    flex: 0 0 100%;
+}
+
+.form-submit input{
+    background: var(--zelena);
+    color: var(--bela);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.form-submit input:hover{
+    background: var(--pink);
+    color: var(--bela);
+}
+
+/***********************
+Autor stranica
+************************/
+.autorPage h2{
+    color: var(--pink);
+}
+
+/***********************
+404
+************************/
+.info{
+    flex-direction: column;
+    height: 50vh;
+}
+
+.info a{
+    color: var(--crna);
+    transition: var(--transition);
+}
+
+.info a:hover{
+    color: var(--pink);
+    text-decoration: none;
+}
+
+/*
+searchIcon
+*/
+.spicewpsearchform{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    margin-top: 1px;
+    z-index: 9999;
+    background: #fff;
+    padding: 20px;
+    border: 5px solid var(--pink);
+}
+
+.spicewpsearchform h4{
+    font-size: 1.1rem;
+}
+
+.spicewpsearchform input[type="text"] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #E5E5E5;
+    }
+
+.fa-search{
+    position: relative;
+    top: 5px;
+    border-radius: 50%;
+    border: 1px solid var(--bela);
+    padding: 10px;
+}
+
+.fa-search:hover{
+    border: 1px solid var(--zelena);
+}
+
+/*no post match */
+
+
+
+/**************************
+Responsive 
+***************************/
+@media (min-width: 481px) and (max-width: 768px) {
+
+    /***********Home stranica **********/
+    /* navbar */
+
+    .navbar .socialIcons{
+        display: none !important;
+    }
+
+    .navbar .menu {
+        flex: 0 0 100%;
+    }
+
+    .navbar .menu .navbar-nav{
+        display: flex ;
+        flex-direction: row;
+        padding-top: 20px;
+    }
+
+    .navbar-nav .menu-item{
+        margin-left: 15px;
+    }
+
+    .navbar .logo{
+        flex: 0 0 100%;
+    }
+
+    /*blog*/
+    .blog .col .meta .autorDate {
+        left: 0;
+    }
+
+    /****************Blog stranica *********/
+    .headeri .card {
+        height: 150px;
+        width: 350px;
+    }
+
+    /****************Pojedinacni blog postovi *********/
+    .blog .comment-form-comment{
+        margin-left: 10px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+      .row{
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+      }
+
+      .col-md-6{
+          padding-left: 0!important;
+          padding-right: 0!important;
+          left: 0 !important;
+         
+      }
+
+    /***********Home stranica **********/
+    /* navbar */
+
+    .navbar .socialIcons{
+        display: none !important;
+    }
+
+    .navbar .menu {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .navbar .menu .navbar-nav{
+        display: flex ;
+        flex-direction: row;
+        padding-top: 20px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-nav .menu-item{
+        margin-left: 10px;
+    }
+
+    .navbar .logo{
+        flex: 0 0 100%;
+    }
+
+    .navbar .logo a{
+        font-size: 35px;
+    }
+
+    /* mainHeader */
+    .mainHeader .col-md-6{
+        top: 30%;
+        padding: 20px !important;
+    }
+
+    /* opis projekta */
+
+    .opisProjekta {
+        text-align: center;
+        padding: 50px 20px ;
+    }
+
+    .opisProjekta .btnKontakt{
+        margin-bottom: 10px;
+    }
+
+    /* slider */
+
+    .slider{
+        padding: 50px 20px ;
+    }
+
+    /* blog */
+    .blog {
+        padding: 50px 20px !important;
+    }
+
+    .blog .col{
+        flex: 0 0 100%;
+        margin-bottom: 50px;
+    }
+
+    .blog .col:last-child{
+        margin-bottom: 0;
+    }
+
+    .blog .col .meta .autorDate{
+        left: 0;
+    }
+
+    /* footer */
+    footer .col{
+        margin-bottom: 50px;
+    }
+
+    /***********Blog stranica **********/
+    .headeri .card{
+        width: auto;
+    }
+
+    /***********Kontakt stranica **********/
+
+    .contact{
+        padding: 50px 20px;
+    }
+
+    .contact .row .col-md-6:first-child{
+        order: -1;
+     }
+
+     /***********Pojedinacni blog postovi **********/
+     .blog .col-md-4{
+         display: none;
+     }
+
+     .headeri .slikaBlogova img{
+         height: 300px;
+     }
+
+     .pojedinacniBlogovi .meta{
+         display: block;
+     }
+
+     .pojedinacniBlogovi .vertical
+     {
+         display: none;
+     }
+
+     .pojedinacniBlogovi .col-md-8 span a{
+         margin-left: 0 !important;
+         margin-top: 5px;
+     }
+     
+     .pojedinacniBlogovi .horizontal{
+         margin-top: 0;
+     }
+    /***********Autor stranica **********/
+     
+ 
+}
